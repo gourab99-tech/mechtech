@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.videos::-webkit-scrollbar {
+  width: 0px;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(237, 237, 237);
+  border-radius: 40px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.mystyle {
+  border: 2px solid rgb(7, 7, 79);
+  border-radius: 5px;
+  background: radial-gradient(
+    circle,
+    rgba(63, 94, 251, 1) 0%,
+    rgba(191, 70, 252, 1) 100%
+  );
+}
+
+.mystyle:hover {
+  width: 25%;
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  transform: translateX(-5px);
+  transition: all 0.3s ease-in-out;
+}
+
+.dsbtn {
+  border: 2px solid black;
+}
+
+.dsbtn:hover {
+  width: 25%;
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
+  margin-right: 10px;
+  /* transform: translate(-100%, 0) rotate(10deg); */
+  transition: all 0.3s ease-in-out;
+}
