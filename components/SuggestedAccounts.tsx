@@ -23,7 +23,7 @@ const SuggestedAccounts: NextPage<IProps> = ({ fetchAllUsers, allUsers }) => {
   return (
     <div className='xl:border-b-2 border-gray-200 pb-4'>
       <p className='text-gray-500 font-semibold m-3 mt-4 hidden xl:block'>
-        Suggested accounts
+        Subject Experts
       </p>
       <div>
         {users?.slice(0, 6).map((user: IUser) => (
@@ -41,12 +41,12 @@ const SuggestedAccounts: NextPage<IProps> = ({ fetchAllUsers, allUsers }) => {
               </div>
 
               <div className='hidden xl:block'>
-                <p className='flex gap-1 items-center text-md font-bold text-primary lowercase'>
-                  {user.userName.replace(/\s+/g, '')}{' '}
+                <p className='flex gap-1 items-center text-md font-bold text-primary'>
+                  {user.userName}{' '}
                   <GoVerified className='text-blue-400' />
                 </p>
-                <p className='capitalize text-gray-400 text-xs'>
-                  {user.userName}
+                <p className='text-gray-400 text-xs lowercase'>
+                  {'@' + user.userName.replace(/\s+/g, '')}
                 </p>
               </div>
             </div>

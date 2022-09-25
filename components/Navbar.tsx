@@ -10,7 +10,7 @@ import { GoogleLogin, googleLogout  } from '@react-oauth/google';
 import useAuthStore from '../store/authStore';
 import { IUser } from '../types';
 import { createOrGetUser } from '../utils';
-import Logo from '../utils/tiktik-logo.png';
+import Logo from '../utils/logo.png';
 
 const Navbar = () => {
   const [user, setUser] = useState<IUser | null>();
@@ -42,7 +42,52 @@ const Navbar = () => {
           />
         </div>
       </Link>
-
+      <div>
+        {user ? (
+          <div className='flex gap-5 md:gap-10'>
+            <Link href='/upload'>
+              <button className='border-2 px-2 md:px-4 text-sm font-semibold flex items-center gap-1 upload-btn'>
+                <IoMdAdd className='text-md' />{' '}
+                <span className='hidden md:block'>Upload Video </span>
+              </button>
+            </Link>
+            <Link href='/upload_text'>
+              <button className='border-2 px-2 md:px-4 text-sm font-semibold flex items-center gap-1 upload-btn'>
+                <IoMdAdd className='text-md' />{' '}
+                <span className='hidden md:block'>Upload Blog </span>
+              </button>
+            </Link>
+            {user.image && (
+              <Link href={`/profile/${user._id}`}>
+                <div style={{ marginLeft : "30px", marginTop: "5px"}}>
+                  <Image
+                    className='rounded-full cursor-pointer'
+                    src={user.image}
+                    alt='user'
+                    width={40}
+                    height={40}
+                  />
+                </div>
+              </Link>
+            )}
+              <button
+                type='button'
+                className=' border-2 p-2 rounded-full cursor-pointer outline-none shadow-md logout-btn'
+                onClick={() => {
+                  googleLogout();
+                  removeUser();
+                }}
+              >
+                <AiOutlineLogout color='#b721ff' fontSize={25} />
+              </button>
+          </div>
+        ) : (
+            <GoogleLogin
+              onSuccess={(response) => createOrGetUser(response, addUser)}
+              onError={() => console.log('Login Failed')}
+            />
+        )}
+      </div>
       <div className='relative hidden md:block'>
         <form
           onSubmit={handleSearch}
@@ -62,52 +107,7 @@ const Navbar = () => {
           </button>
         </form>
       </div>
-      <div>
-        {user ? (
-          <div className='flex gap-5 md:gap-10'>
-            <Link href='/upload'>
-              <button className='border-2 px-2 md:px-4 text-md font-semibold flex items-center gap-2'>
-                <IoMdAdd className='text-xl' />{' '}
-                <span className='hidden md:block'>Upload Video </span>
-              </button>
-            </Link>
-            <Link href='/upload_text'>
-              <button className='border-2 px-2 md:px-4 text-md font-semibold flex items-center gap-2'>
-                <IoMdAdd className='text-xl' />{' '}
-                <span className='hidden md:block'>Upload Blog </span>
-              </button>
-            </Link>
-            {user.image && (
-              <Link href={`/profile/${user._id}`}>
-                <div>
-                  <Image
-                    className='rounded-full cursor-pointer'
-                    src={user.image}
-                    alt='user'
-                    width={40}
-                    height={40}
-                  />
-                </div>
-              </Link>
-            )}
-              <button
-                type='button'
-                className=' border-2 p-2 rounded-full cursor-pointer outline-none shadow-md'
-                onClick={() => {
-                  googleLogout();
-                  removeUser();
-                }}
-              >
-                <AiOutlineLogout color='red' fontSize={21} />
-              </button>
-          </div>
-        ) : (
-            <GoogleLogin
-              onSuccess={(response) => createOrGetUser(response, addUser)}
-              onError={() => console.log('Login Failed')}
-            />
-        )}
-      </div>
+     
     </div>
   );
 };

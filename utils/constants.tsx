@@ -1,39 +1,46 @@
-import { BsCode, BsEmojiSunglasses } from 'react-icons/bs';
-import { GiCakeSlice, GiGalaxy, GiLipstick } from 'react-icons/gi';
-import { FaPaw, FaMedal, FaGamepad } from 'react-icons/fa';
+import { BsTools } from 'react-icons/bs';
+import { DiMootoolsBadge } from 'react-icons/di';
+import { GiBoatEngine } from 'react-icons/gi';
+import { BiCycling, BiMeteor } from 'react-icons/bi';
+import { MdEngineering } from 'react-icons/md';
+import { TiDeviceLaptop, TiFlowSwitch,TiFlash } from "react-icons/ti";
 
 export const topics = [
   {
-    name: 'development',
-    icon: <BsCode />,
+    name: 'eng1',
+    icon: <BsTools />,
   },
   {
-    name: 'comedy',
-    icon: <BsEmojiSunglasses />,
+    name: 'eng2',
+    icon: <DiMootoolsBadge />,
   },
   {
-    name: 'gaming',
-    icon: <FaGamepad />,
+    name: 'eng3',
+    icon: <BiCycling />,
   },
   {
-    name: 'food',
-    icon: <GiCakeSlice />,
+    name: 'eng4',
+    icon: <BiMeteor />,
   },
   {
-    name: 'dance',
-    icon: <GiGalaxy />,
+    name: 'eng5',
+    icon: <MdEngineering />,
   },
   {
-    name: 'beauty',
-    icon: <GiLipstick />,
+    name: 'eng6',
+    icon: <TiDeviceLaptop />,
   },
   {
-    name: 'animals',
-    icon: <FaPaw />,
+    name: 'eng7',
+    icon: <TiFlowSwitch />,
   },
   {
-    name: 'sports',
-    icon: <FaMedal />,
+    name: 'eng8',
+    icon: <TiFlash />,
+  },
+  {
+    name: 'eng9',
+    icon: <GiBoatEngine />,
   },
 ];
 

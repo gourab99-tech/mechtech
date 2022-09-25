@@ -3,9 +3,8 @@ import { useRouter } from 'next/router';
 import { GoVerified } from 'react-icons/go';
 import Image from 'next/image';
 import Link from 'next/link';
-import { MdOutlineCancel } from 'react-icons/md';
-import { BsFillPlayFill } from 'react-icons/bs';
-import { HiVolumeUp, HiVolumeOff } from 'react-icons/hi';
+import { BsFillPlayFill, BsArrowLeft } from 'react-icons/bs';
+import { GiSoundOn, GiSoundOff } from 'react-icons/gi';
 
 import Comments from '../../components/Comments';
 import { BASE_URL } from '../../utils';
@@ -82,7 +81,7 @@ const Detail = ({ postDetails }: IProps) => {
           <div className='relative flex-2 w-[1000px] lg:w-9/12 flex justify-center items-center bg-blurred-img bg-no-repeat bg-cover bg-center'>
             <div className='opacity-90 absolute top-6 left-2 lg:left-6 flex gap-6 z-50'>
               <p className='cursor-pointer ' onClick={() => router.back()}>
-                <MdOutlineCancel className='text-white text-[35px] hover:opacity-90' />
+                <BsArrowLeft className='text-white text-[35px] hover:opacity-90' />
               </p>
             </div>
             <div className='relative'>
@@ -107,11 +106,11 @@ const Detail = ({ postDetails }: IProps) => {
             <div className='absolute bottom-5 lg:bottom-10 right-5 lg:right-10  cursor-pointer'>
               {isVideoMuted ? (
                 <button onClick={() => setIsVideoMuted(false)}>
-                  <HiVolumeOff className='text-white text-3xl lg:text-4xl' />
+                  <GiSoundOff className='text-white text-3xl lg:text-4xl' />
                 </button>
               ) : (
                 <button onClick={() => setIsVideoMuted(true)}>
-                  <HiVolumeUp className='text-white text-3xl lg:text-4xl' />
+                  <GiSoundOn className='text-white text-3xl lg:text-4xl' />
                 </button>
               )}
             </div>

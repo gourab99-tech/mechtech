@@ -2,11 +2,10 @@ import React, { useEffect, useRef, useState } from 'react';
 import { NextPage } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import { HiVolumeUp, HiVolumeOff } from 'react-icons/hi';
-import { BsFillPlayFill, BsFillPauseFill } from 'react-icons/bs';
 import { GoVerified } from 'react-icons/go';
+import { AiOutlinePauseCircle, AiOutlinePlayCircle } from 'react-icons/ai';
 import { BsPlay } from 'react-icons/bs';
-
+import { GiSoundOn, GiSoundOff } from 'react-icons/gi';
 import { Video } from './../types';
 
 interface IProps {
@@ -42,7 +41,7 @@ const VideoCard: NextPage<IProps> = ({ post: { caption, postedBy, video, _id, li
         <Link href={`/detail/${_id}`}>
           <video
             loop
-            src={video.asset.url}
+            src={video?.asset?.url}
             className='w-[250px] md:w-full rounded-xl cursor-pointer'
           ></video>
         </Link>
@@ -86,9 +85,9 @@ const VideoCard: NextPage<IProps> = ({ post: { caption, postedBy, video, _id, li
                   {postedBy.userName}{' '}
                   <GoVerified className='text-blue-400 text-md' />
                 </p>
-                <p className='capitalize font-medium text-xs text-gray-500 hidden md:block'>
+                {/* <p className='capitalize font-medium text-xs text-gray-500 hidden md:block'>
                   {postedBy.userName}
-                </p>
+                </p> */}
               </div>
             </Link>
             <Link href={`/detail/${_id}`}>
@@ -117,20 +116,20 @@ const VideoCard: NextPage<IProps> = ({ post: { caption, postedBy, video, _id, li
             <div className='absolute bottom-6 cursor-pointer left-8 md:left-14 lg:left-0 flex gap-10 lg:justify-between w-[100px] md:w-[50px] lg:w-[600px] p-3'>
               {playing ? (
                 <button onClick={onVideoPress}>
-                  <BsFillPauseFill className='text-black text-2xl lg:text-4xl' />
+                  <AiOutlinePauseCircle className='text-black text-2xl lg:text-4xl' />
                 </button>
               ) : (
                 <button onClick={onVideoPress}>
-                  <BsFillPlayFill className='text-black text-2xl lg:text-4xl' />
+                  <AiOutlinePlayCircle className='text-black text-2xl lg:text-4xl' />
                 </button>
               )}
               {isVideoMuted ? (
                 <button onClick={() => setIsVideoMuted(false)}>
-                  <HiVolumeOff className='text-black text-2xl lg:text-4xl' />
+                  <GiSoundOff className='text-black text-2xl lg:text-4xl' />
                 </button>
               ) : (
                 <button onClick={() => setIsVideoMuted(true)}>
-                  <HiVolumeUp className='text-black text-2xl lg:text-4xl' />
+                  <GiSoundOn className='text-black text-2xl lg:text-4xl' />
                 </button>
               )}
             </div>
