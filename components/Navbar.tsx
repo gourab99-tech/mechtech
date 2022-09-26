@@ -44,7 +44,7 @@ const Navbar = () => {
       </Link>
       <div>
         {user ? (
-          <div className='flex gap-5 md:gap-10'>
+          <div className='flex gap-5 md:gap-10' style={{border:"2px solid red"}}>
             <Link href='/upload'>
               <button className='border-2 px-2 md:px-4 text-sm font-semibold flex items-center gap-1 upload-btn'>
                 <IoMdAdd className='text-md' />{' '}
@@ -61,7 +61,8 @@ const Navbar = () => {
               <Link href={`/profile/${user._id}`}>
                 <div style={{ marginLeft : "30px", marginTop: "5px"}}>
                   <Image
-                    className='rounded-full cursor-pointer'
+                    // className='rounded-full cursor-pointer user-logo'
+                    className='user-logo'
                     src={user.image}
                     alt='user'
                     width={40}
