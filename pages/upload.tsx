@@ -116,7 +116,7 @@ const Upload = () => {
                         Up to 10 minutes <br />
                         Less than 2 GB
                       </p>
-                      <p className='bg-[#F51997] text-center mt-8 rounded text-white text-md font-medium p-2 w-52 outline-none'>
+                      <p className='text-center mt-8 rounded text-white text-md font-medium p-2 w-52 outline-none s-file'>
                         Select file
                       </p>
                     </div>

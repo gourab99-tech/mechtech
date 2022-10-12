@@ -116,7 +116,7 @@ const Upload = () => {
                         720x1280 resolution or higher <br />
                         Less than 100 MB
                       </p>
-                      <p className='bg-[#F51997] text-center mt-8 rounded text-white text-md font-medium p-2 w-52 outline-none'>
+                      <p className='text-center mt-8 rounded text-white text-md font-medium p-2 w-52 outline-none s-file'>
                         Select file
                       </p>
                     </div>
@@ -157,13 +157,14 @@ const Upload = () => {
           )}
         </div>
         <div className='flex flex-col gap-3 pb-10'>
-          <label className='text-md font-medium '>Write your blog...</label>
+          <label className='text-md font-medium '>Blog</label>
           <textarea
             value={caption}
             onChange={(e) => setCaption(e.target.value)}
             className='rounded lg:after:w-650 outline-none text-md border-2 border-gray-200 p-2'
+            placeholder='write your here...'
           />
-          <label className='text-md font-medium '>Choose a topic</label>
+          <label className='text-md font-medium mt-5'>Choose a topic</label>
 
           <select
             onChange={(e) => {
@@ -185,7 +186,7 @@ const Upload = () => {
             <button
               onClick={handleDiscard}
               type='button'
-              className='border-gray-300 border-2 text-md font-medium p-2 rounded w-28 lg:w-44 outline-none'
+              className='border-gray-300 border-2 text-md font-medium p-2 rounded w-28 lg:w-44 outline-none dsbtn'
             >
               Discard
             </button>
@@ -193,7 +194,7 @@ const Upload = () => {
             //   disabled={videoAsset?.url ? false : true}
               onClick={handlePost}
               type='button'
-              className='bg-[#F51997] text-white text-md font-medium p-2 rounded w-28 lg:w-44 outline-none'
+              className='text-white text-md font-medium p-2 rounded w-28 lg:w-44 outline-none mystyle'
             >
               {savingPost ? 'Posting...' : 'Post'}
             </button>

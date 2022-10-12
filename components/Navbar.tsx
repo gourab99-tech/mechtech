@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { AiOutlineLogout } from 'react-icons/ai';
 import { BiSearch } from 'react-icons/bi';
-import { IoMdAdd } from 'react-icons/io';
+import { MdOutlineFileUpload } from 'react-icons/md';
 import { GoogleLogin, googleLogout  } from '@react-oauth/google';
 
 import useAuthStore from '../store/authStore';
@@ -31,7 +31,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className='w-full flex justify-between items-center border-b-2 border-gray-200 py-2 px-4'>
+    <div className='w-full flex justify-between items-center border-b-2 border-gray-200 py-2 px-4' style={{overflow:"scroll"}}>
       <Link href='/'>
         <div className='w-[100px] md:w-[129px] md:h-[30px] h-[38px]'>
           <Image
@@ -44,16 +44,16 @@ const Navbar = () => {
       </Link>
       <div>
         {user ? (
-          <div className='flex gap-5 md:gap-10' style={{border:"2px solid red"}}>
+          <div className='flex gap-5 md:gap-12'>
             <Link href='/upload'>
               <button className='border-2 px-2 md:px-4 text-sm font-semibold flex items-center gap-1 upload-btn'>
-                <IoMdAdd className='text-md' />{' '}
+                <MdOutlineFileUpload className='text-md mr-1' />{' '}
                 <span className='hidden md:block'>Upload Video </span>
               </button>
             </Link>
             <Link href='/upload_text'>
               <button className='border-2 px-2 md:px-4 text-sm font-semibold flex items-center gap-1 upload-btn'>
-                <IoMdAdd className='text-md' />{' '}
+                <MdOutlineFileUpload className='text-md mr-1' />{' '}
                 <span className='hidden md:block'>Upload Blog </span>
               </button>
             </Link>
@@ -79,7 +79,7 @@ const Navbar = () => {
                   removeUser();
                 }}
               >
-                <AiOutlineLogout color='#b721ff' fontSize={25} />
+                <AiOutlineLogout fontSize={25} />
               </button>
           </div>
         ) : (
