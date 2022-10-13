@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import { GoVerified } from "react-icons/go";
 import Image from "next/image";
 import Link from "next/link";
-import { MdOutlineCancel } from "react-icons/md";
+import { BsArrowLeft } from "react-icons/bs";
 import { BsFillPlayFill } from "react-icons/bs";
 import { HiVolumeUp, HiVolumeOff } from "react-icons/hi";
 
@@ -82,7 +82,7 @@ const Detail = ({ postDetails }: IProps) => {
           <div className="relative flex-2 w-[1000px] lg:w-9/12 flex justify-center items-center bg-blurred-img bg-no-repeat bg-cover bg-center">
             <div className="opacity-90 absolute top-6 left-2 lg:left-6 flex gap-6 z-50">
               <p className="cursor-pointer " onClick={() => router.back()}>
-                <MdOutlineCancel className="text-white text-[35px] hover:opacity-90" />
+                <BsArrowLeft className="text-white text-[30px] hover:opacity-90" />
               </p>
             </div>
             <div className="relative">
@@ -128,11 +128,17 @@ const Detail = ({ postDetails }: IProps) => {
                     src={post.postedBy.image}
                   />
                   <div>
-                    <div className="text-xl font-bold lowercase tracking-wider flex gap-2 items-center justify-center">
-                      {post.postedBy.userName.replace(/\s+/g, "")}{" "}
+                    <div className="text-xl font-bold tracking-wider flex gap-2 items-center justify-center">
+                      {post.postedBy.userName}{" "}
                       <GoVerified className="text-blue-400 text-xl" />
                     </div>
-                    <p className="text-md"> {post.postedBy.userName}</p>
+                    <p className="text-md">
+                      {" "}
+                      {"@" +
+                        post.postedBy.userName
+                          .replace(/\s+/g, "")
+                          .toLowerCase()}
+                    </p>
                   </div>
                 </div>
               </Link>

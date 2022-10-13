@@ -1,5 +1,5 @@
-import React from 'react';
-import { MdOutlineVideocamOff } from 'react-icons/md';
+import React from "react";
+import { FaUserSlash } from "react-icons/fa";
 
 interface IProps {
   text: string;
@@ -7,11 +7,11 @@ interface IProps {
 
 const NoResults = ({ text }: IProps) => {
   return (
-    <div className='flex flex-col justify-center items-center h-full w-full'>
-      <p className='text-4xl'>
-        <MdOutlineVideocamOff />
+    <div className="flex flex-col justify-center items-center h-full w-full">
+      <p className="text-4xl">
+        <FaUserSlash />
       </p>
-      <p className='text-1xl text-center'>{text}</p>
+      <p className="text-1xl text-center mt-5">{text}</p>
     </div>
   );
 };
