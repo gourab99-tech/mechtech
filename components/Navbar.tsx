@@ -64,7 +64,6 @@ const Navbar = () => {
               <Link href={`/profile/${user._id}`}>
                 <div style={{ marginLeft: "30px", marginTop: "5px" }}>
                   <Image
-                    // className='rounded-full cursor-pointer user-logo'
                     className="user-logo"
                     src={user.image}
                     alt="user"
