@@ -33,11 +33,8 @@ const Sidebar: NextPage = () => {
         <div
           className="xl:w-400 w-20 flex flex-col justify-start mb-10 p-3 sidebar-section"
           style={{
-            //border-r-2 border-gray-100 xl:border-0
             border: "1px solid rgba(255, 255, 255, .25)",
             borderRadius: "20px",
-            // backgroundColor:'rgba(255,255,255,0.4)',
-            // backdropFilter:'blur(5px)',
             boxShadow: "0 0 10px 1px rgba(0, 0, 0, 0.25)",
             marginTop: "10px",
             marginLeft: "5px",
