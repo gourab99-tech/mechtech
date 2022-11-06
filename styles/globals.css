@@ -154,3 +154,7 @@ a {
 .fullsidebar {
   background-color: #135058;
 }
+
+.blurtype {
+  background-image: url("https://images.unsplash.com/photo-1556139943-4bdca53adf1e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8d2hpdGUlMjBncmFkaWVudHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60");
+}

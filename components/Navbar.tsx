@@ -10,7 +10,7 @@ import { GoogleLogin, googleLogout } from "@react-oauth/google";
 import useAuthStore from "../store/authStore";
 import { IUser } from "../types";
 import { createOrGetUser } from "../utils";
-import Logo from "../utils/a.png";
+import Logo from "../utils/logo.png";
 
 const Navbar = () => {
   const [user, setUser] = useState<IUser | null>();
@@ -38,7 +38,7 @@ const Navbar = () => {
       <Link href="/">
         <div className="w-[100px] md:w-[129px] md:h-[30px] h-[38px]">
           <Image
-            className="cursor-pointer"
+            className="cursor-pointer hover:bg-gray-100 rounded-xl p-2 mb-2"
             src={Logo}
             alt="logo"
             layout="responsive"
@@ -99,12 +99,12 @@ const Navbar = () => {
           <input
             value={searchValue}
             onChange={(e) => setSearchValue(e.target.value)}
-            className="bg-primary p-3 md:text-md font-medium border-2 border-gray-100 focus:outline-none focus:border-2 focus:border-gray-300 w-[300px] md:w-[350px] rounded-full  md:top-0"
+            className="bg-white focus:bg-primary p-3 md:text-md font-medium border-2 border-gray-300 focus:outline-none focus:border-2 focus:border-yellow-400 w-[300px] md:w-[350px] rounded-full  md:top-0"
             placeholder="Search here..."
           />
           <button
             onClick={handleSearch}
-            className="absolute md:right-5 right-6 top-4 border-l-2 border-gray-300 pl-4 text-2xl text-gray-400"
+            className="absolute md:right-5 right-6 top-4 border-l-2 border-pink-400 pl-4 text-2xl text-pink-400"
           >
             <BiSearch />
           </button>
