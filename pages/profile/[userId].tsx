@@ -76,7 +76,7 @@ const Profile = ({ data }: IProps) => {
             Liked
           </p>
         </div>
-        <div className="flex gap-6 flex-wrap md:justify-start">
+        <div className="flex gap-5 flex-wrap md:justify-start">
           {videosList.length > 0 ? (
             videosList.map((post: Video, idx: number) => (
               <VideoCard key={idx} post={post} />
