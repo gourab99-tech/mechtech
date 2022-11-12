@@ -99,12 +99,12 @@ const Navbar = () => {
           <input
             value={searchValue}
             onChange={(e) => setSearchValue(e.target.value)}
-            className="bg-white focus:bg-primary p-3 md:text-md font-medium border-2 border-gray-300 focus:outline-none focus:border-2 focus:border-yellow-400 w-[300px] md:w-[350px] rounded-full  md:top-0"
+            className="bg-white focus:bg-primary p-3 md:text-md font-medium border-2 border-gray-300 focus:outline-none focus:border-2 focus:border-fuchsia-900 w-[300px] md:w-[350px] rounded-full  md:top-0"
             placeholder="Search here..."
           />
           <button
             onClick={handleSearch}
-            className="absolute md:right-5 right-6 top-4 border-l-2 border-pink-400 pl-4 text-2xl text-yellow-400"
+            className="absolute md:right-5 right-6 top-4 border-l-2 border-fuchsia-400 pl-4 text-2xl text-fuchsia-700"
           >
             <BiSearch />
           </button>
