@@ -1,7 +1,7 @@
 import { BsTools } from "react-icons/bs";
 import { DiMootoolsBadge } from "react-icons/di";
 import { GiBoatEngine, GiWaterSplash } from "react-icons/gi";
-import { BiCycling, BiMeteor } from "react-icons/bi";
+import { BiMeteor } from "react-icons/bi";
 import { MdEngineering } from "react-icons/md";
 import { TiDeviceLaptop, TiFlowSwitch, TiFlash } from "react-icons/ti";
 
