@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+
 html,
 body {
   padding: 0;
@@ -154,4 +155,17 @@ a {
 .blurtype {
   /* background-image: url("https://images.unsplash.com/photo-1556139943-4bdca53adf1e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8d2hpdGUlMjBncmFkaWVudHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60"); */
   background-image: url("../utils/mywall.png");
+}
+@media screen and (max-device-width: 800px), screen and (max-width: 800px) {
+  .blurtype {
+    background-image: none;
+  }
+}
+.homeContent {
+  background-color: #f3f4ed;
+  border-radius: 20px;
+}
+
+.homeContent:hover {
+  background-color: #eff4d7;
 }

@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { SanityAssetDocument } from "@sanity/client";
 import { useRouter } from "next/router";
-import { FaCloudUploadAlt } from "react-icons/fa";
 import { RiVideoUploadFill } from "react-icons/ri";
 import { MdDelete } from "react-icons/md";
 import axios from "axios";
@@ -31,7 +30,6 @@ const Upload = () => {
     const selectedFile = e.target.files[0];
     const fileTypes = ["video/mp4", "video/webm", "video/ogg"];
 
-    // uploading asset to sanity
     if (fileTypes.includes(selectedFile.type)) {
       setWrongFileType(false);
       setLoading(true);

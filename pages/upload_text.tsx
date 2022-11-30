@@ -31,7 +31,6 @@ const Upload = () => {
     const selectedFile = e.target.files[0];
     const fileTypes = ["image/png", "image/jpg", "image/jpeg"];
 
-    // uploading asset to sanity
     if (fileTypes.includes(selectedFile.type)) {
       setWrongFileType(false);
       setLoading(true);

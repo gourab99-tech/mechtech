@@ -62,7 +62,7 @@ const VideoCard: NextPage<IProps> = ({
   }
 
   return (
-    <div className="flex flex-col border-b-2 border-gray-200 pb-6">
+    <div className="flex flex-col border-b-2 border-gray-200 pb-6 homeContent">
       <div>
         <div className="flex gap-3 p-2 cursor-pointer font-semibold rounded ">
           <div className="md:w-16 md:h-16 w-10 h-10">
@@ -92,7 +92,7 @@ const VideoCard: NextPage<IProps> = ({
               </div>
             </Link>
             <Link href={`/detail/${_id}`}>
-              <p className="mt-2 font-normal ">{caption}</p>
+              <p className="mt-2 font-normal">{caption}</p>
             </Link>
           </div>
         </div>

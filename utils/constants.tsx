@@ -45,26 +45,26 @@ export const topics = [
 ];
 
 export const footerList1 = [
-  "About",
+  // "About",
   "Newsroom",
-  "Store",
+  // "Store",
   "Contact",
-  "Carrers",
-  "ByteDance",
-  "Creator Directory",
+  // "Carrers",
+  // "ByteDance",
+  // "Creator Directory",
 ];
 export const footerList2 = [
   "MechTech for Good",
   "Advertise",
   "Developers",
   "Transparency",
-  "Rewards",
+  // "Rewards",
 ];
 export const footerList3 = [
   "Help",
   "Safety",
   "Terms",
   "Privacy",
-  "Creator Portal",
+  "About",
   "Community Guidelines",
 ];
