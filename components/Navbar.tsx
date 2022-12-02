@@ -32,13 +32,13 @@ const Navbar = () => {
 
   return (
     <div
-      className="w-full flex justify-between items-center border-b-2 border-gray-200 py-2 px-4"
+      className="w-full flex justify-between items-center border-b-2 border-gray-200 py-2 px-4 bg-purple-50 pt-5"
       style={{ overflow: "scroll" }}
     >
       <Link href="/">
         <div className="w-[100px] md:w-[129px] md:h-[30px] h-[38px]">
           <Image
-            className="cursor-pointer hover:bg-gray-100 rounded-xl p-2 mb-2"
+            className="cursor-pointer hover:bg-gray-100 rounded-xl p-2 -mt-2"
             src={Logo}
             alt="logo"
             layout="responsive"
@@ -94,7 +94,7 @@ const Navbar = () => {
       <div className="relative hidden md:block">
         <form
           onSubmit={handleSearch}
-          className="absolute md:static top-10 -left-20 bg-white"
+          className="absolute md:static top-10 -left-20 bg-red-50"
         >
           <input
             value={searchValue}

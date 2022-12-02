@@ -153,7 +153,6 @@ a {
 }
 
 .blurtype {
-  /* background-image: url("https://images.unsplash.com/photo-1556139943-4bdca53adf1e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8d2hpdGUlMjBncmFkaWVudHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60"); */
   background-image: url("../utils/mywall.png");
 }
 @media screen and (max-device-width: 800px), screen and (max-width: 800px) {
@@ -162,10 +161,10 @@ a {
   }
 }
 .homeContent {
-  background-color: #f3f4ed;
+  background-color: #fef3c7;
   border-radius: 20px;
 }
 
 .homeContent:hover {
-  background-color: #eff4d7;
+  background-color: #fde68a;
 }

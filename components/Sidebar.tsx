@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { NextPage } from "next";
 import { useRouter } from "next/router";
 import Link from "next/link";
-import { AiFillHome, AiOutlineMenu } from "react-icons/ai";
+import { AiOutlineMenu } from "react-icons/ai";
 import { ImCancelCircle } from "react-icons/im";
 import { RiCompassDiscoverFill } from "react-icons/ri";
 
@@ -10,6 +10,7 @@ import SuggestedAccounts from "./SuggestedAccounts";
 import Discover from "./Discover";
 import Footer from "./Footer";
 import useAuthStore from "../store/authStore";
+
 const Sidebar: NextPage = () => {
   const [showSidebar, setShowSidebar] = useState<Boolean>(true);
   const { pathname } = useRouter();
