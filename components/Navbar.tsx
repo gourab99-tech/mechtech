@@ -38,7 +38,7 @@ const Navbar = () => {
       <Link href="/">
         <div className="w-[100px] md:w-[129px] md:h-[30px] h-[38px]">
           <Image
-            className="cursor-pointer hover:bg-gray-100 rounded-xl p-2 -mt-2"
+            className="cursor-pointer hover:bg-gray-100 rounded-xl p-2"
             src={Logo}
             alt="logo"
             layout="responsive"

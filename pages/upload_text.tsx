@@ -86,7 +86,7 @@ const Upload = () => {
   };
 
   return (
-    <div className="flex w-full h-full absolute left-0 top-[60px] lg:top-[70px] mb-10 pt-10 lg:pt-20 bg-[#F8F8F8] justify-center">
+    <div className="flex w-full h-full absolute left-0 top-[60px] lg:top-[70px] mb-10 pt-10 lg:pt-20 bg-[#F8F8F8] justify-center mt-5">
       <div className=" bg-white rounded-lg xl:h-[80vh] flex gap-6 flex-wrap justify-center items-center p-14 pt-6">
         <div>
           <div>
@@ -109,7 +109,7 @@ const Upload = () => {
                         <p className="font-bold text-xl">
                           <IoCloudUploadOutline className="text-gray-300 text-6xl" />
                         </p>
-                        <p className="text-xl font-semibold text-center">
+                        <p className="text-xl font-semibold text-center mt-2">
                           Select image to upload
                         </p>
                       </div>
